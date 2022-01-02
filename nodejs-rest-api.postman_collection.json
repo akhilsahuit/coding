@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "c3319a4a-7b30-43fb-9d66-f91d81c95a66",
+		"name": "nodejs-rest-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"akhil\",\n  \"email\": \"akhil@gmail.com\",\n  \"password\": \"akhil123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "akhil@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "akhil123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "digbijay",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "digbijay@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "digbijay",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/6003804be11616b4fcb9e2a8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"6003804be11616b4fcb9e2a8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/6003804ee11616b4fcb9e2a9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"6003804ee11616b4fcb9e2a9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDM4MDRlZTExNjE2YjRmY2I5ZTJhOSIsImlhdCI6MTYxMDg0MzI5NCwiZXhwIjoxNjEwOTI5Njk0fQ.yGFD5oC1BujGPc_mg2FNGIGv5lGxOnT4GgWbvvgm76Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "lucky",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "akhil123@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/6003804ee11616b4fcb9e2a9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"6003804ee11616b4fcb9e2a9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "health_check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_weather_forcast",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDA2MmE0MmExNGYzNzU4MjU0Njk5MCIsImlhdCI6MTY0MTA0Njc0OSwiZXhwIjoxNjQxMTMzMTQ5fQ.TU7U0649QkRmx2EdazV7QDwbCDuORjxkFE9R44tY1As",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/weather/forecast?latitude=22.7196&longitude=75.8577",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"weather",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "22.7196"
+						},
+						{
+							"key": "longitude",
+							"value": "75.8577"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_user_system_info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDA2MmE0MmExNGYzNzU4MjU0Njk5MCIsImlhdCI6MTY0MTA0Njc0OSwiZXhwIjoxNjQxMTMzMTQ5fQ.TU7U0649QkRmx2EdazV7QDwbCDuORjxkFE9R44tY1As",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/users/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

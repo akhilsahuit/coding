@@ -23,5 +23,9 @@ for bootstrapping the application itself.
 The server file is used to spin up the server and tells the
 app to listen on a specific port.
 
+Configuration are stored in config folder.
+
+Tests are stored in test folder.
+
 brew services start mongodb-community@4.4
 brew services stop mongodb-community@4.4
